@@ -1,3 +1,5 @@
+import org.junit.Test;
+
 public class Person
 {
     private String IDNum; //should never change seq of digits
@@ -79,9 +81,12 @@ public class Person
         return "Person [IDNum=" + IDNum + ", firstName=" + firstName + ", lastName=" + lastName + ", title=" + title
                 + ", YOB=" + YOB + "]";
     }
+    @Override
     public String toCSV() {
         return
     }
+
+    @Override
     public String toJSONRecord() {
         String retString = "";
         char DQ = '\u0022'; // double quote char
@@ -95,7 +100,78 @@ public class Person
 
         return retString;
     }
+    
     public String toXMLRecord(){}
+
+    @Test
+    public void testGetAge() {
+        
+    }
+
+    @Test
+    public void testGetAge2() {
+        
+    }
+
+    @Test
+    public void testGetFirstName() {
+        
+    }
+
+    @Test
+    public void testGetFormalName() {
+        
+    }
+
+    @Test
+    public void testGetFullName() {
+        
+    }
+
+    @Test
+    public void testGetIDNum() {
+        
+    }
+
+    @Test
+    public void testGetLastName() {
+        
+    }
+
+    @Test
+    public void testGetTitle() {
+        
+    }
+
+    @Test
+    public void testGetYOB() {
+        
+    }
+
+    @Test
+    public void testSetFirstName() {
+        
+    }
+
+    @Test
+    public void testSetIDNum() {
+        
+    }
+
+    @Test
+    public void testSetLastName() {
+        
+    }
+
+    @Test
+    public void testSetTitle() {
+        
+    }
+
+    @Test
+    public void testSetYOB() {
+        
+    }
 
     
 }
