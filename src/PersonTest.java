@@ -1,7 +1,6 @@
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
 
 public class PersonTest {
 
