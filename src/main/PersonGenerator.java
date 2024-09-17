@@ -1,6 +1,6 @@
+package main;
 import java.io.BufferedOutputStream;
 import java.io.BufferedWriter;
-import java.nio.file.StandardOpenOption;
 import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -8,50 +8,50 @@ import java.io.OutputStreamWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ProductWriter {
+/**
+ * A program to generate and save person data to a file.
+ */
+public class PersonGenerator {
     public static void main(String[] args) {
 
-        ArrayList<String> products = new ArrayList<>();
+        ArrayList<Person> persons = new ArrayList<>();
         Scanner in = new Scanner(System.in);
         boolean done = false;
 
         File workingDirectory = new File(System.getProperty("user.dir"));
-        Path file = Paths.get(workingDirectory.getPath(), "ProductTestData.txt");
-
-        String productRec;
-        String ID;
-        String name;
-        String description;
-        double cost;
+        Path file = Paths.get(workingDirectory.getPath(), "personData.txt");
 
         do {
-            ID = SafeInput.getNonZeroLenString(in, "Enter the product ID: ");
-            name = SafeInput.getNonZeroLenString(in, "Enter the product name: ");
-            description = SafeInput.getNonZeroLenString(in, "Enter the product description: ");
-            cost = SafeInput.getRangedDouble(in, "Enter the cost: ", 0.0, Double.MAX_VALUE);
+            String firstName = SafeInput.getNonZeroLenString(in, "Enter the first name: ");
+            String lastName = SafeInput.getNonZeroLenString(in, "Enter the last name: ");
+            String ID = SafeInput.getNonZeroLenString(in, "Enter the ID: ");
+            String title = SafeInput.getNonZeroLenString(in, "Enter the title: ");
+            int YOB = SafeInput.getRangedInt(in, "Enter the year of birth: ", 1940, 2010);
 
-            productRec = String.format("%s, %s, %s, %.1f", ID, name, description, cost);
-            products.add(productRec);
+            Person person = new Person(firstName, lastName, ID, title, YOB);
+            persons.add(person);
 
             done = SafeInput.getYNConfirm(in, "Are you done?");
         } while (!done);
 
-        for (String p : products)
+        for (Person p : persons) {
             System.out.println(p);
+        }
 
         try {
             OutputStream out = new BufferedOutputStream(Files.newOutputStream(file, StandardOpenOption.CREATE));
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out));
 
-            for (String rec : products) {
-                writer.write(rec, 0, rec.length());
+            for (Person person : persons) {
+                writer.write(person.toCSV());
                 writer.newLine();
             }
             writer.close();
-            System.out.println("Product data file written!");
+            System.out.println("Person data file written!");
         } catch (IOException e) {
             e.printStackTrace();
         }
