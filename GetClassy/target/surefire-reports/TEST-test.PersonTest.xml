@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="test.PersonTest" time="0.07" tests="9" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="test.PersonTest" time="0.067" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\Chris\OneDrive\Documents\GitHub\CompProg2\GetClassy\target\test-classes;C:\Users\Chris\OneDrive\Documents\GitHub\CompProg2\GetClassy\target\classes;C:\Users\Chris\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Chris\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.class.path" value="c:\Users\Chris\OneDrive\Documents\GitHub\CompProg2\GetClassy\target\test-classes;c:\Users\Chris\OneDrive\Documents\GitHub\CompProg2\GetClassy\target\classes;C:\Users\Chris\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Chris\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Users\Chris\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\21\bin"/>
-    <property name="sun.java.command" value="C:\Users\Chris\AppData\Local\Temp\surefire6700241241109550558\surefirebooter17434776888266664680.jar C:\Users\Chris\AppData\Local\Temp\surefire6700241241109550558 2024-09-17T00-43-41_090-jvmRun1 surefire3205663908491908575tmp surefire_013676332607927532017tmp"/>
+    <property name="sun.java.command" value="C:\Users\Chris\AppData\Local\Temp\surefire5765319171356199967\surefirebooter10894467877482041099.jar C:\Users\Chris\AppData\Local\Temp\surefire5765319171356199967 2024-09-17T16-21-30_819-jvmRun1 surefire11315593547523396356tmp surefire_012997818704413286059tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\Chris\OneDrive\Documents\GitHub\CompProg2\GetClassy\target\test-classes;C:\Users\Chris\OneDrive\Documents\GitHub\CompProg2\GetClassy\target\classes;C:\Users\Chris\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Chris\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="surefire.test.class.path" value="c:\Users\Chris\OneDrive\Documents\GitHub\CompProg2\GetClassy\target\test-classes;c:\Users\Chris\OneDrive\Documents\GitHub\CompProg2\GetClassy\target\classes;C:\Users\Chris\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Chris\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Chris"/>
     <property name="user.language" value="en"/>
@@ -25,12 +25,12 @@
     <property name="java.version.date" value="2024-07-16"/>
     <property name="java.home" value="C:\Users\Chris\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\21"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\Chris\OneDrive\Documents\GitHub\CompProg2\GetClassy"/>
+    <property name="basedir" value="c:\Users\Chris\OneDrive\Documents\GitHub\CompProg2\GetClassy"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Chris\AppData\Local\Temp\surefire6700241241109550558\surefirebooter17434776888266664680.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Chris\AppData\Local\Temp\surefire5765319171356199967\surefirebooter10894467877482041099.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.4+7-LTS"/>
@@ -46,7 +46,7 @@
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="java.io.tmpdir" value="C:\Users\Chris\AppData\Local\Temp\"/>
     <property name="java.version" value="21.0.4"/>
-    <property name="user.dir" value="C:\Users\Chris\OneDrive\Documents\GitHub\CompProg2\GetClassy"/>
+    <property name="user.dir" value="c:\Users\Chris\OneDrive\Documents\GitHub\CompProg2\GetClassy"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -59,13 +59,13 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testGetIDNum" classname="test.PersonTest" time="0.005"/>
+  <testcase name="testGetIDNum" classname="test.PersonTest" time="0.007"/>
   <testcase name="testGetFullName" classname="test.PersonTest" time="0"/>
   <testcase name="testToJSONRecord" classname="test.PersonTest" time="0"/>
   <testcase name="testToXMLRecord" classname="test.PersonTest" time="0"/>
   <testcase name="testToCSV" classname="test.PersonTest" time="0"/>
   <testcase name="testGetFirstName" classname="test.PersonTest" time="0"/>
   <testcase name="testEquals" classname="test.PersonTest" time="0"/>
-  <testcase name="testGetAge" classname="test.PersonTest" time="0"/>
+  <testcase name="testGetAge" classname="test.PersonTest" time="0.001"/>
   <testcase name="testGetFormalName" classname="test.PersonTest" time="0"/>
 </testsuite>

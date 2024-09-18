@@ -1,8 +1,6 @@
-package test;
-
 import static org.junit.Assert.*;
+
 import org.junit.Test;
-import main.Person;
 
 public class PersonTest {
     @Test

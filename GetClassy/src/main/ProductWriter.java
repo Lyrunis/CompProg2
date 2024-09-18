@@ -1,4 +1,3 @@
-package main;
 import java.io.BufferedOutputStream;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -34,7 +33,7 @@ public class ProductWriter {
             description = SafeInput.getNonZeroLenString(in, "Enter the product description: ");
             cost = SafeInput.getRangedDouble(in, "Enter the cost: ", 0.0, Double.MAX_VALUE);
 
-            productRec = String.format("%s, %s, %s, %.1f", ID, name, description, cost);
+            productRec = String.format("%s, %s, %s, %.2f", ID, name, description, cost);
             products.add(productRec);
 
             done = SafeInput.getYNConfirm(in, "Are you done?");
@@ -43,8 +42,9 @@ public class ProductWriter {
         for (String p : products)
             System.out.println(p);
 
+        // Write to file using APPEND mode
         try {
-            OutputStream out = new BufferedOutputStream(Files.newOutputStream(file, StandardOpenOption.CREATE));
+            OutputStream out = new BufferedOutputStream(Files.newOutputStream(file, StandardOpenOption.CREATE, StandardOpenOption.APPEND));
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out));
 
             for (String rec : products) {
@@ -52,7 +52,7 @@ public class ProductWriter {
                 writer.newLine();
             }
             writer.close();
-            System.out.println("Product data file written!");
+            System.out.println("Product data writing!");
         } catch (IOException e) {
             e.printStackTrace();
         }
