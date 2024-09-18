@@ -1,4 +1,3 @@
-
 import java.io.BufferedOutputStream;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -42,8 +41,9 @@ public class PersonGenerator {
             System.out.println(p);
         }
 
+        // Write to file using APPEND mode
         try {
-            OutputStream out = new BufferedOutputStream(Files.newOutputStream(file, StandardOpenOption.CREATE));
+            OutputStream out = new BufferedOutputStream(Files.newOutputStream(file, StandardOpenOption.CREATE, StandardOpenOption.APPEND));
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out));
 
             for (Person person : persons) {
@@ -51,7 +51,7 @@ public class PersonGenerator {
                 writer.newLine();
             }
             writer.close();
-            System.out.println("Person data file written!");
+            System.out.println("Person data appended to the file!");
         } catch (IOException e) {
             e.printStackTrace();
         }

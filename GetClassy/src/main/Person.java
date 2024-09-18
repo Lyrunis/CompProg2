@@ -78,7 +78,7 @@ public class Person {
     }
 
     public String toCSV() {
-        return String.format("%s,%s,%s,%s,%d", IDNum, firstName, lastName, title, YOB);
+        return String.format("%s, %s, %s, %s, %d", IDNum, firstName, lastName, title, YOB);
     }
 
     public String toJSONRecord() {
