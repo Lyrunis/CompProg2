@@ -6,14 +6,14 @@ public class InheritanceDemo {
         ArrayList<Worker> workers = new ArrayList<>();
 
         // Create Worker instances
-        workers.add(new Worker("John", "Doe", "W001", "Mr.", 1980, 25.00));
-        workers.add(new Worker("Jane", "Smith", "W002", "Ms.", 1990, 30.00));
-        workers.add(new Worker("Bob", "Johnson", "W003", "Mr.", 1975, 20.00));
+        workers.add(new Worker("001", "Chris", "Vu", "Mr.", 2000, 25.00));
+        workers.add(new Worker("002", "Mimi", "Vu", "Ms.", 1999, 20.00));
+        workers.add(new Worker("003", "Vincent", "Vu", "Mr.", 2002, 17.00));
 
         // Create SalaryWorker instances
-        workers.add(new SalaryWorker("Alice", "Brown", "SW001", "Dr.", 1985, 80000));
-        workers.add(new SalaryWorker("Tom", "White", "SW002", "Mr.", 1995, 60000));
-        workers.add(new SalaryWorker("Sue", "Green", "SW003", "Ms.", 1970, 90000));
+        workers.add(new SalaryWorker("004", "Amie", "Dinh", "Dr.", 1977, 80000));
+        workers.add(new SalaryWorker("005", "Johnie", "Vu", "Mr.", 1976, 60000));
+        workers.add(new SalaryWorker("006", "Thuy", "Dinh", "Ms.", 1970, 50000));
 
         // Simulate 3 weekly pay periods
         int[] hoursWorked = {40, 50, 40}; // Week 1, Week 2 (overtime), Week 3

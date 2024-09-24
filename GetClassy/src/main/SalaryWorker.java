@@ -2,22 +2,22 @@ public class SalaryWorker extends Worker {
     private double annualSalary;
 
     // Constructor that passes 0 for hourlyPayRate, as it doesn't apply to SalaryWorker
-    public SalaryWorker(String firstName, String lastName, String ID, String title, int YOB, double annualSalary) {
-        super(firstName, lastName, ID, title, YOB, 0); // hourlyPayRate is 0 because SalaryWorker doesn't use it
+    public SalaryWorker(String IDNum, String firstName, String lastName, String title, int YOB, double annualSalary) {
+        super(IDNum, firstName, lastName, title, YOB, 0); // hourlyPayRate is 0 because SalaryWorker doesn't use it
         this.annualSalary = annualSalary;
     }
 
-    // Override calculateWeeklyPay to return weekly salary
+    // Override calculateWeeklyPay to return weekly salary regardless of hours worked
     @Override
     public double calculateWeeklyPay(double hoursWorked) {
         return annualSalary / 52; // Weekly pay is fixed, based on annual salary
     }
 
-    // Override displayWeeklyPay to show the weekly salary
+    // Override displayWeeklyPay to show the fixed weekly salary with hours worked displayed
     @Override
     public void displayWeeklyPay(double hoursWorked) {
         double weeklyPay = calculateWeeklyPay(hoursWorked);
-        System.out.printf("%-10s | Salary Pay: $%.2f (fraction of annual salary)\n", getFullName(), weeklyPay);
+        System.out.printf("ID: %-4s | Name: %-10s | Clock: %.2f | Salary Pay: $%.2f (Fixed)\n", getIDNum(), getFullName(), hoursWorked, weeklyPay);
     }
 
     // Override toCSV to include annualSalary

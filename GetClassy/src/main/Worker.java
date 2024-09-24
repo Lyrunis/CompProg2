@@ -19,12 +19,14 @@ public class Worker extends Person {
 
     // Display weekly pay breakdown
     public void displayWeeklyPay(double hoursWorked) {
-        double regularPay = Math.min(40, hoursWorked) * hourlyPayRate;
-        double overtimePay = (hoursWorked > 40) ? (hoursWorked - 40) * hourlyPayRate * 1.5 : 0;
+        double regularHours = Math.min(40, hoursWorked); // Regular hours, capped at 40
+        double overtimeHours = (hoursWorked > 40) ? hoursWorked - 40 : 0; // Overtime hours
+        double regularPay = regularHours * hourlyPayRate;
+        double overtimePay = overtimeHours * hourlyPayRate * 1.5;
         double totalPay = regularPay + overtimePay;
 
-        System.out.printf("Worker: %s | Regular Hours: %.2f, Regular Pay: $%.2f | Overtime Pay: $%.2f | Total Pay: $%.2f\n",
-                getFullName(), Math.min(40, hoursWorked), regularPay, overtimePay, totalPay);
+        // Display actual hours worked, including regular and overtime hours
+        System.out.printf("ID: %-4s | Name: %-10s | Clock: %.2f | Reg Hours: %.2f | Reg Pay: $%.2f | OT Hours: %.2f | OT Pay: $%.2f | Total Pay: $%.2f\n", getIDNum(), getFullName(), hoursWorked, regularHours, regularPay, overtimeHours, overtimePay, totalPay);
     }
 
     // Overriding toCSV to include hourlyPayRate
