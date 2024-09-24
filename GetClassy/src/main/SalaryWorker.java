@@ -23,8 +23,9 @@ public class SalaryWorker extends Worker {
     // Override toCSV to include annualSalary
     @Override
     public String toCSV() {
-        return String.format("%s, %.2f", super.toCSV(), annualSalary);
+        return String.format("%s,%s,%s,%s,%d,%.2f", getIDNum(), getFirstName(), getLastName(), getTitle(), getYOB(), annualSalary);
     }
+
 
     // Override toXMLRecord to include annualSalary
     @Override

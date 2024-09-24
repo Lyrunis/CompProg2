@@ -32,8 +32,9 @@ public class Worker extends Person {
     // Overriding toCSV to include hourlyPayRate
     @Override
     public String toCSV() {
-        return String.format("%s, %.2f", super.toCSV(), hourlyPayRate);
+        return String.format("%s,%s,%s,%s,%d,%.2f", getIDNum(), getFirstName(), getLastName(), getTitle(), getYOB(), hourlyPayRate);
     }
+
 
     // Overriding toJSONRecord to include hourlyPayRate
     @Override
